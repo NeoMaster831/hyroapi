@@ -6,21 +6,29 @@ BOOL APIENTRY DllMain( HMODULE hModule,
                        LPVOID lpReserved
                      )
 {
-    switch (ul_reason_for_call)
-    {
-    case DLL_PROCESS_ATTACH:
-    case DLL_THREAD_ATTACH: {
+  switch (ul_reason_for_call)
+  {
+
+  case DLL_PROCESS_ATTACH:
+  case DLL_THREAD_ATTACH: {
+
 		if (!Ioctl::Init()) {
 			return FALSE;
 		}
-        LogConsole("HyroApi successfully loaded.\n");
-    } break;
-    case DLL_THREAD_DETACH:
-    case DLL_PROCESS_DETACH: {
-        Ioctl::Terminate();
-		LogConsole("HyroApi successfully unloaded.\n");
-    } break;
-    }
-    return TRUE;
+
+    LogConsole("HyroApi successfully loaded.\n");
+
+  } break;
+
+  case DLL_THREAD_DETACH:
+  case DLL_PROCESS_DETACH: {
+
+    Ioctl::Terminate();
+    LogConsole("HyroApi successfully unloaded.\n");
+
+  } break;
+
+  }
+  return TRUE;
 }
 

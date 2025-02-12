@@ -10,13 +10,13 @@ int main()
 		return 1;
 	}
 
-	auto HyroApiTest = (BOOL(*)())GetProcAddress(hDll, "HyroApiTest");
+	auto HyroApirTest = (BOOL(*)())GetProcAddress(hDll, "HyroApirTest");
 
-	if (HyroApiTest == NULL) {
+	if (HyroApirTest == NULL) {
 		std::cout << "Failed to get the function." << std::endl;
 		return 1;
 	}
 
-	std::cout << HyroApiTest() << std::endl;
+	std::cout << HyroApirTest() << std::endl;
 
 }
