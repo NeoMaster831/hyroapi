@@ -141,6 +141,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="apiept.h" />
+    <ClInclude Include="apigeneral.h" />
+    <ClInclude Include="apiggeneral.h" />
     <ClInclude Include="framework.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="ioctl.h" />
@@ -149,6 +152,9 @@
     <ClInclude Include="utils.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="apiept.cpp" />
+    <ClCompile Include="apigeneral.cpp" />
+    <ClCompile Include="apiggeneral.cpp" />
     <ClCompile Include="apitest.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="global.cpp" />

@@ -25,6 +25,12 @@
     <Filter Include="Source Files\api">
       <UniqueIdentifier>{d915d230-beb3-4b35-846f-09c76e618635}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\api\guest">
+      <UniqueIdentifier>{97c4057f-3656-4d8f-82c5-00c843baac03}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\api\guest">
+      <UniqueIdentifier>{a6e4b459-40c5-46ad-a542-7265cef43b1f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -45,6 +51,15 @@
     <ClInclude Include="utils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="apiept.h">
+      <Filter>Header Files\api</Filter>
+    </ClInclude>
+    <ClInclude Include="apigeneral.h">
+      <Filter>Header Files\api</Filter>
+    </ClInclude>
+    <ClInclude Include="apiggeneral.h">
+      <Filter>Header Files\api\guest</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -61,6 +76,15 @@
     </ClCompile>
     <ClCompile Include="apitest.cpp">
       <Filter>Source Files\api</Filter>
+    </ClCompile>
+    <ClCompile Include="apiept.cpp">
+      <Filter>Source Files\api</Filter>
+    </ClCompile>
+    <ClCompile Include="apigeneral.cpp">
+      <Filter>Source Files\api</Filter>
+    </ClCompile>
+    <ClCompile Include="apiggeneral.cpp">
+      <Filter>Source Files\api\guest</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

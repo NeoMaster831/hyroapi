@@ -20,5 +20,8 @@
 #include "utils.h"
 
 #include "apitest.h"
+#include "apiept.h"
+#include "apigeneral.h"
+#include "apiggeneral.h"
 
 #endif //PCH_H
