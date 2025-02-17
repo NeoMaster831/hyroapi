@@ -2,18 +2,12 @@
 
 #include "pch.h"
 
-typedef struct _APIW_GET_PHYS_ADDR_REQUEST {
-  UINT64 virtualAddress;
-  UINT64 cr3;
-} APIW_GET_PHYS_ADDR_REQUEST, * PAPIW_GET_PHYS_ADDR_REQUEST;
-
 /*
  * @brief Get the physical address of a virtual address.
  * @param virtualAddress The virtual address to get the physical address of.
- * @param cr3 The cr3 value of the process. if NULL, the current process cr3 will be used.
  * @return UINT64 - The physical address of the virtual address.
  */
-extern "C" __declspec(dllexport) UINT64 HyroApirGnrGetPhysAddr(UINT64 virtualAddress, UINT64 cr3);
+extern "C" __declspec(dllexport) UINT64 HyroApirGnrGetPhysAddr(UINT64 virtualAddress);
 
 /*
  * @brief Allocate a non-paged buffer.

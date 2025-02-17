@@ -13,7 +13,7 @@ int main()
 	}
 
 	auto HyroApirTest = (BOOL(*)())GetProcAddress(hDll, "HyroApirTest");
-	auto HyroApirGnrGetPhysAddr = (UINT64(*)(UINT64, UINT64))GetProcAddress(hDll, "HyroApirGnrGetPhysAddr");
+	auto HyroApirGnrGetPhysAddr = (UINT64(*)(UINT64))GetProcAddress(hDll, "HyroApirGnrGetPhysAddr");
   auto HyroApirGnrAllocNonPagedBuffer = (PVOID(*)(UINT64))GetProcAddress(hDll, "HyroApirGnrAllocNonPagedBuffer");
   auto HyroApirGnrFreeNonPagedBuffer = (VOID(*)(PVOID))GetProcAddress(hDll, "HyroApirGnrFreeNonPagedBuffer");
   auto HyroApirGnrCopyNonPagedBuffer = (VOID(*)(PVOID, PVOID, SIZE_T))GetProcAddress(hDll, "HyroApirGnrCopyNonPagedBuffer");
@@ -35,7 +35,7 @@ int main()
   // You know we can't get the physical address of a virtual address in user mode.
   // But we can get the physical address of a virtual address in kernel mode.
 
-  auto kernelPhysAddr = HyroApirGnrGetPhysAddr((UINT64)kernelVar, 0);
+  auto kernelPhysAddr = HyroApirGnrGetPhysAddr((UINT64)kernelVar);
   std::cout << "Kernel buffer physical address: " << std::hex << kernelPhysAddr << std::dec << '\n';
 
   // Let's test about copying a non-paged buffer.

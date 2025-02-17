@@ -1,19 +1,15 @@
 #include "pch.h"
 
-UINT64 HyroApirGnrGetPhysAddr(UINT64 virtualAddr, UINT64 cr3) {
-
-  APIW_GET_PHYS_ADDR_REQUEST inputBuffer = { .virtualAddress = virtualAddr, .cr3 = cr3 };
+UINT64 HyroApirGnrGetPhysAddr(UINT64 virtualAddr) {
   UINT64 outputBuffer = 0;
-  if (!Ioctl::Request(
+  UINT64 inputBuffer = virtualAddr;
+  Ioctl::Request(
     GloVar::Ioctl::IOCTL_HYROAPI_GENERAL_GET_PHYSICAL_ADDRESS,
     &inputBuffer,
-    sizeof(APIW_GET_PHYS_ADDR_REQUEST),
+    sizeof(UINT64),
     &outputBuffer,
     sizeof(UINT64)
-  )) {
-    return 0;
-  }
-
+  );
   return outputBuffer;
 }
 
