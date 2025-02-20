@@ -1,0 +1,38 @@
+"""
+fixed.py - Fixed (Global) functions or variables for Hyro API
+"""
+
+from hyroapipy.ioctlw import IoctlCtlCode
+
+# IOCTL Codes
+
+IOCTL_HYROAPI_TEST = \
+    IoctlCtlCode(0x22, 0x800, 0, 0)
+IOCTL_HYROAPI_EPT_ADD = \
+    IoctlCtlCode(0x22, 0x801, 0, 0)
+IOCTL_HYROAPI_EPT_REMOVE = \
+    IoctlCtlCode(0x22, 0x802, 0, 0)
+IOCTL_HYROAPI_EPT_ENABLE = \
+    IoctlCtlCode(0x22, 0x803, 0, 0)
+IOCTL_HYROAPI_EPT_DISABLE = \
+    IoctlCtlCode(0x22, 0x804, 0, 0)
+IOCTL_HYROAPI_EPT_MODIFY = \
+    IoctlCtlCode(0x22, 0x805, 0, 0)
+IOCTL_HYROAPI_GENERAL_GET_PHYSICAL_ADDRESS = \
+    IoctlCtlCode(0x22, 0x806, 0, 0)
+IOCTL_HYROAPI_GENERAL_ALLOC_NONPAGED_BUFFER = \
+    IoctlCtlCode(0x22, 0x807, 0, 0)
+IOCTL_HYROAPI_GENERAL_FREE_NONPAGED_BUFFER = \
+    IoctlCtlCode(0x22, 0x808, 0, 0)
+IOCTL_HYROAPI_GENERAL_COPY_NONPAGED_BUFFER = \
+    IoctlCtlCode(0x22, 0x809, 0, 0)
+IOCTL_HYROAPI_GENERAL_EXECUTE_NONPAGED_BUFFER = \
+    IoctlCtlCode(0x22, 0x80A, 0, 0)
+IOCTL_HYROAPI_GUEST_GENERAL_COPY_NONPAGED_BUFFER = \
+    IoctlCtlCode(0x22, 0x80B, 0, 0)
+IOCTL_HYROAPI_GUEST_GENERAL_EXECUTE_NONPAGED_BUFFER = \
+    IoctlCtlCode(0x22, 0x80C, 0, 0)
+
+# Constants
+
+NULL = b"" # CAUTION, NOT A C NULL WRAPPER!!!
