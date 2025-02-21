@@ -40,7 +40,7 @@ class IOCTLSession:
         if output_buffer_size == 0:
             output_buffer = 0
         else:
-            output_buffer = (ctypes.c_byte * output_buffer_size)()
+            output_buffer = (ctypes.c_uint8 * output_buffer_size)()
         
         bytes_returned = wintypes.DWORD(0)
 
